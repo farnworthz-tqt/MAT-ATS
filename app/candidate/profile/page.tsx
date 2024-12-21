@@ -1,11 +1,19 @@
 'use client'
 
 import { useState, useRef } from 'react'
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { 
+  Button, 
+  Input, 
+  Label, 
+  Textarea, 
+  Card, 
+  CardContent, 
+  CardHeader, 
+  CardTitle,
+  Avatar,
+  AvatarFallback,
+  AvatarImage
+} from "@/components/ui"
 
 export default function Profile() {
   const [profile, setProfile] = useState({

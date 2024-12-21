@@ -4,8 +4,12 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  images: {
-    domains: ['placeholder.com'],
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': __dirname,
+    }
+    return config
   },
 }
 
