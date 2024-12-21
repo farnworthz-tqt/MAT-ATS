@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { CalendarIcon, MapPinIcon, ClockIcon } from 'lucide-react'
 
-interface JobCardProps {
+export interface JobCardProps {
   id: number
   title: string
   department: string
@@ -12,7 +12,7 @@ interface JobCardProps {
   salary: string
   closingDate: string
   description: string
-  onApply: (id: number) => void
+  onSelect: (id: number) => void
 }
 
 export function JobCard({ 
@@ -24,7 +24,7 @@ export function JobCard({
   salary, 
   closingDate, 
   description, 
-  onApply 
+  onSelect 
 }: JobCardProps) {
   return (
     <Card className="w-full h-full flex flex-col">
@@ -53,7 +53,7 @@ export function JobCard({
         </div>
       </CardContent>
       <CardFooter>
-        <Button onClick={() => onApply(id)} className="w-full">Apply Now</Button>
+        <Button onClick={() => onSelect(id)} className="w-full">Apply Now</Button>
       </CardFooter>
     </Card>
   )
