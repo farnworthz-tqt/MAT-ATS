@@ -1,4 +1,5 @@
 'use client'
+
 import Link from 'next/link'
 import { Inter } from 'next/font/google'
 import { usePathname } from 'next/navigation'
@@ -21,8 +22,9 @@ export default function CandidateLayout({
               <li>
                 <Link
                   href="/candidate/profile"
-                  className="inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-white hover:shadow-sm data-[active=true]:bg-white data-[active=true]:shadow-sm"
-                  data-active={pathname === '/candidate/profile'}
+                  className={`inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-white hover:shadow-sm ${
+                    pathname === '/candidate/profile' ? 'bg-white shadow-sm' : ''
+                  }`}
                 >
                   Profile
                 </Link>
@@ -30,8 +32,9 @@ export default function CandidateLayout({
               <li>
                 <Link
                   href="/candidate/jobs"
-                  className="inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-white hover:shadow-sm data-[active=true]:bg-white data-[active=true]:shadow-sm"
-                  data-active={pathname === '/candidate/jobs'}
+                  className={`inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-white hover:shadow-sm ${
+                    pathname === '/candidate/jobs' ? 'bg-white shadow-sm' : ''
+                  }`}
                 >
                   Jobs
                 </Link>
